@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="DevExtreme.AspNet.Data" Version="2.9.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\Touride.Framework.Abstractions\Touride.Framework.Abstractions.csproj" />
+	  <ProjectReference Include="..\..\..\Touride.Framework.Dapr\Touride.Framework.Dapr.csproj" />
+	  <ProjectReference Include="..\..\..\Touride.Framework.Data\Touride.Framework.Data.csproj" />
+	  <ProjectReference Include="..\..\..\Touride.Framework.Notification\Touride.Framework.Notification.csproj" />
+	</ItemGroup>
+
+</Project>

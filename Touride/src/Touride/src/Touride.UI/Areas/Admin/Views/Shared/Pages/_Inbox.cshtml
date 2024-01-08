@@ -1,0 +1,198 @@
+﻿   <!-- Page content-->
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="content-title">Mail Inbox</div>
+        <div class="ml-auto">
+            <!-- START action buttons-->
+            <div class="d-flex">
+                <div class="btn-group"><button class="btn btn-secondary btn-sm" type="button"><em class="fas fa-reply text-gray-dark fa-fw"></em></button><button class="btn btn-secondary btn-sm" type="button"><em class="fas fa-reply-all text-gray-dark fa-fw"></em></button><button class="btn btn-secondary btn-sm" type="button"><em class="fas fa-share text-gray-dark fa-fw"></em></button><button class="btn btn-secondary btn-sm" type="button"><em class="fa fa-exclamation text-gray-dark fa-fw"></em></button><button class="btn btn-secondary btn-sm" type="button"><em class="fa fa-times text-gray-dark fa-fw"></em></button></div>
+            </div><!-- END action buttons-->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-2 col-lg-4">
+            <div class="d-flex mb-3 align-items-center"><a class="btn btn-purple mb-compose-button" href="#"><strong>NEW MAIL</strong></a><button class="btn btn-sm btn-secondary mb-toggle-button ml-auto" type="button" data-toggle="collapse" data-target=".mb-boxes"><em class="fa fa-bars fa-fw fa-lg"></em></button></div><!-- START mailbox list-->
+            <div class="mb-boxes collapse show">
+                <div class="card card-default">
+                    <div class="card-body">
+                        <ul class="nav nav-pills flex-column">
+                            <li class="nav-item active"><a class="nav-link d-flex align-items-center" href="#"><em class="fa-fw fa-lg fa fa-inbox mr-2"></em><span>Inbox</span><span class="ml-auto badge badge-primary">42</span></a></li>
+                            <li class="nav-item"><a class="nav-link d-flex align-items-center" href="#"><em class="fa-fw fa-lg fa fa-star mr-2"></em><span>Starred</span><span class="ml-auto badge badge-primary">10</span></a></li>
+                            <li class="nav-item"><a class="nav-link d-flex align-items-center" href="#"><em class="fa-fw fa-lg far fa-paper-plane mr-2"></em><span>Sent</span><span class="ml-auto badge badge-primary">0</span></a></li>
+                            <li class="nav-item"><a class="nav-link d-flex align-items-center" href="#"><em class="fa-fw fa-lg fa fa-edit mr-2"></em><span>Draft</span><span class="ml-auto badge badge-primary">5</span></a></li>
+                            <li><a class="nav-link d-flex align-items-center" href="#"><em class="fa-fw fa-lg fas fa-trash-alt mr-2"></em><span>Trash</span><span class="ml-auto badge badge-primary">0</span></a></li>
+                            <li class="p-1">
+                                <div class="input-group mt-3">
+                                    <input class="form-control border-right-0" id="input-mail-search" type="text" placeholder="Search here..">
+                                    <div class="input-group-append"><span class="input-group-text bg-transparent"><span class="fa fa-search text-muted"></span></span></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- END mailbox list-->
+                <div class="card card-default">
+                    <div class="card-body">
+                        <p><small>Quota (60%)</small></p>
+                        <div class="progress progress-striped progress-xs">
+                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60% Complete</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-10 col-lg-8">
+            <div class="card card-default">
+                <div class="card-body">
+                    <!-- p.lead.text-centerNo mails here-->
+                    <table class="table table-hover mb-mails">
+                        <thead>
+                            <tr>
+                                <th data-check-all>
+                                    <div class="custom-control custom-checkbox"><input class="custom-control-input" id="check-all" type="checkbox"><label class="custom-control-label" for="check-all"></label></div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox"><input class="custom-control-input" id="mailrow1" type="checkbox" checked><label class="custom-control-label" for="mailrow1"></label></div>
+                                </td>
+                                <td class="text-center"><em class="fa-lg fa fa-star text-warning"></em></td>
+                                <td>
+                                    <div class="d-flex">
+                                        <img class="mb-mail-avatar rounded-circle mr-2" alt="Mail Avatar" src="img/user/01.jpg">
+                                        <div class="mb-mail-meta">
+                                            <div class="mb-mail-from">Evelyn Holmes</div>
+                                            <div class="mb-mail-subject">Donec ullamcorper vestibulum lorem</div>
+                                            <div class="mb-mail-preview">Fusce gravida, diam ac adipiscing pretium, sem nibh bibendum diam, non consequat quam metus non nunc</div>
+                                        </div>
+                                        <div class="mb-mail-date ml-auto">10 minutes ago</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox"><input class="custom-control-input" id="mailrow2" type="checkbox"><label class="custom-control-label" for="mailrow2"></label></div>
+                                </td>
+                                <td class="text-center"><em class="fa-lg far fa-star"></em></td>
+                                <td>
+                                    <div class="d-flex">
+                                        <img class="mr-2 mb-mail-avatar rounded-circle" alt="Mail Avatar" src="img/user/02.jpg">
+                                        <div class="mb-mail-meta">
+                                            <div class="mb-mail-from">Allison Grant</div>
+                                            <div class="mb-mail-subject">Donec ullamcorper vestibulum lorem</div>
+                                            <div class="mb-mail-preview">Nunc eget lacinia felis. Pellentesque sollicitudin sollicitudin erat, in imperdiet tortor fringil</div>
+                                        </div>
+                                        <div class="ml-auto mb-mail-date">1 day ago</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox"><input class="custom-control-input" id="mailrow3" type="checkbox"><label class="custom-control-label" for="mailrow3"></label></div>
+                                </td>
+                                <td class="text-center"><em class="fa-lg far fa-star"></em></td>
+                                <td>
+                                    <div class="d-flex">
+                                        <img class="mr-2 mb-mail-avatar rounded-circle" alt="Mail Avatar" src="img/user/03.jpg">
+                                        <div class="mb-mail-meta">
+                                            <div class="mb-mail-from">Daryl Carlson</div>
+                                            <div class="mb-mail-subject">Donec ullamcorper vestibulum lorem</div>
+                                            <div class="mb-mail-preview">Nulla facilisi. Sed sit amet sem vel purus pulvinar venenatis. Class aptent taciti</div>
+                                        </div>
+                                        <div class="ml-auto mb-mail-date">2 days ago</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox"><input class="custom-control-input" id="mailrow4" type="checkbox"><label class="custom-control-label" for="mailrow4"></label></div>
+                                </td>
+                                <td class="text-center"><em class="fa-lg far fa-star"></em></td>
+                                <td>
+                                    <div class="d-flex">
+                                        <img class="mr-2 mb-mail-avatar rounded-circle" alt="Mail Avatar" src="img/user/04.jpg">
+                                        <div class="mb-mail-meta">
+                                            <div class="mb-mail-from">George Clark</div>
+                                            <div class="mb-mail-subject">Donec ullamcorper vestibulum lorem</div>
+                                            <div class="mb-mail-preview">Integer sit amet vulputate mauris. Proin purus nisl, tempor ut tempor at, ornare vel mauris. Ut ac l</div>
+                                        </div>
+                                        <div class="ml-auto mb-mail-date">3 days ago</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox"><input class="custom-control-input" id="mailrow5" type="checkbox"><label class="custom-control-label" for="mailrow5"></label></div>
+                                </td>
+                                <td class="text-center"><em class="fa-lg far fa-star"></em></td>
+                                <td>
+                                    <div class="d-flex">
+                                        <img class="mr-2 mb-mail-avatar rounded-circle" alt="Mail Avatar" src="img/user/05.jpg">
+                                        <div class="mb-mail-meta">
+                                            <div class="mb-mail-from">Bonnie Bowman</div>
+                                            <div class="mb-mail-subject">Donec ullamcorper vestibulum lorem</div>
+                                            <div class="mb-mail-preview">Integer sit amet vulputate mauris. Proin purus nisl, tempor ut tempor at, ornare vel mauris. Ut ac l</div>
+                                        </div>
+                                        <div class="ml-auto mb-mail-date">4 days ago</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox"><input class="custom-control-input" id="mailrow6" type="checkbox"><label class="custom-control-label" for="mailrow6"></label></div>
+                                </td>
+                                <td class="text-center"><em class="fa-lg far fa-star"></em></td>
+                                <td>
+                                    <div class="d-flex">
+                                        <img class="mr-2 mb-mail-avatar rounded-circle" alt="Mail Avatar" src="img/user/06.jpg">
+                                        <div class="mb-mail-meta">
+                                            <div class="mb-mail-from">Warren Watts</div>
+                                            <div class="mb-mail-subject">Donec ullamcorper vestibulum lorem</div>
+                                            <div class="mb-mail-preview">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In at conseq</div>
+                                        </div>
+                                        <div class="ml-auto mb-mail-date">5 days ago</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox"><input class="custom-control-input" id="mailrow7" type="checkbox"><label class="custom-control-label" for="mailrow7"></label></div>
+                                </td>
+                                <td class="text-center"><em class="fa-lg far fa-star"></em></td>
+                                <td>
+                                    <div class="d-flex">
+                                        <img class="mr-2 mb-mail-avatar rounded-circle" alt="Mail Avatar" src="img/user/07.jpg">
+                                        <div class="mb-mail-meta">
+                                            <div class="mb-mail-from">Elijah Ward</div>
+                                            <div class="mb-mail-subject">Donec ullamcorper vestibulum lorem</div>
+                                            <div class="mb-mail-preview">Nunc hendrerit, neque ullamcorper eleifend ornare, arcu est bibendum ipsum, id malesuada sem justo v</div>
+                                        </div>
+                                        <div class="ml-auto mb-mail-date">6 days ago</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-checkbox"><input class="custom-control-input" id="mailrow8" type="checkbox"><label class="custom-control-label" for="mailrow8"></label></div>
+                                </td>
+                                <td class="text-center"><em class="fa-lg far fa-star"></em></td>
+                                <td>
+                                    <div class="d-flex">
+                                        <img class="mr-2 mb-mail-avatar rounded-circle" alt="Mail Avatar" src="img/user/08.jpg">
+                                        <div class="mb-mail-meta">
+                                            <div class="mb-mail-from">Colleen Payne</div>
+                                            <div class="mb-mail-subject">Donec ullamcorper vestibulum lorem</div>
+                                            <div class="mb-mail-preview">Integer sit amet vulputate mauris. Proin purus nisl, tempor ut tempor at, ornare vel mauris. Ut ac l</div>
+                                        </div>
+                                        <div class="ml-auto mb-mail-date">7 days ago</div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

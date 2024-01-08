@@ -1,0 +1,17 @@
+{
+  "name": "Touride.AdminPanel.Web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "devextreme": "22.1",
+    "devextreme-aspnet-data": "^2.8.6",
+    "jquery": "^3.5.1"
+  }
+}

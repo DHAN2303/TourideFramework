@@ -1,0 +1,34 @@
+﻿<div class="full-page-background bg-darker"></div>
+<div class="d-flex align-items-center justify-content-center h-100 w-100 flex-column">
+    <!-- START card-->
+    <div class="card card-flat" style="min-width: 300px">
+        <div class="card-header text-center bg-transparent border-0"><a href="#"><img class="block-center" src="img/logo3.png" alt="Image"></a></div>
+        <div class="card-body">
+            <p class="text-center py-2 text-bold">SIGNUP TO GET INSTANT ACCESS.</p>
+            <form id="registerForm" novalidate>
+                <div class="form-group">
+                    <label class="text-muted" for="signupInputEmail1">Email address</label>
+                    <div class="input-group with-focus">
+                        <input class="form-control border-right-0" id="signupInputEmail1" type="email" placeholder="Enter email" autocomplete="off" required>
+                        <div class="input-group-append"><span class="input-group-text text-muted bg-transparent border-left-0"><em class="fa fa-envelope"></em></span></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="text-muted" for="signupInputPassword1">Password</label>
+                    <div class="input-group with-focus">
+                        <input class="form-control border-right-0" id="signupInputPassword1" type="password" placeholder="Password" autocomplete="off" required>
+                        <div class="input-group-append"><span class="input-group-text text-muted bg-transparent border-left-0"><em class="fa fa-lock"></em></span></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="text-muted" for="signupInputRePassword1">Retype Password</label>
+                    <div class="input-group with-focus">
+                        <input class="form-control border-right-0" id="signupInputRePassword1" type="password" placeholder="Retype Password" autocomplete="off" required data-parsley-equalto="#signupInputPassword1">
+                        <div class="input-group-append"><span class="input-group-text text-muted bg-transparent border-left-0"><em class="fa fa-lock"></em></span></div>
+                    </div>
+                </div>
+                <div class="custom-control custom-checkbox mt-0"><input class="custom-control-input" id="agree" type="checkbox" required name="agreed"><label class="custom-control-label" for="agree"> I agree with the<a class="ml-1" href="#">terms</a></label></div><button class="btn btn-block btn-primary mt-3" type="submit">Create account</button>
+            </form>
+        </div>
+    </div>
+</div>

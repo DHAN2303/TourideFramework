@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Touride.Framework.DataAudit.RabbitMq": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:58683;http://localhost:58685"
+    }
+  }
+}

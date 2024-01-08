@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Touride.Framework.DataAudit.Common": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:58686;http://localhost:58687"
+    }
+  }
+}

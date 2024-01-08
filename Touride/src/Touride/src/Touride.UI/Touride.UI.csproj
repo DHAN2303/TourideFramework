@@ -1,0 +1,235 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+	<PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+	<ItemGroup>
+	  <Content Remove="OpenAPIs\swagger.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AspNetCoreHero.ToastNotification" Version="1.1.0" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+		<PackageReference Include="DevExtreme.AspNet.Data" Version="2.9.2" />
+		<PackageReference Include="DevExtreme.Web" Version="22.1.3" />
+		<PackageReference Include="IdentityModel" Version="6.1.0" />
+		<PackageReference Include="IdentityModel.AspNetCore" Version="4.3.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="7.0.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
+		<PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="7.0.2">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.10" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="NSwag.ApiDescription.Client" Version="13.18.2">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<None Include="wwwroot\Admin\img\landing\header-background.psd" />
+		<None Include="wwwroot\Admin\img\landing\mobile-app.psd" />
+		<None Include="wwwroot\Admin\js\app.init.js" />
+		<None Include="wwwroot\Admin\js\app.js" />
+		<None Include="wwwroot\Admin\js\custom\custom.js" />
+		<None Include="wwwroot\Admin\js\gulpfile.js" />
+		<None Include="wwwroot\Admin\js\modules\charts\flot.js" />
+		<None Include="wwwroot\Admin\js\modules\charts\sparkline.js" />
+		<None Include="wwwroot\Admin\js\modules\common\bootstrap-start.js" />
+		<None Include="wwwroot\Admin\js\modules\common\card-tools.js" />
+		<None Include="wwwroot\Admin\js\modules\common\constants.js" />
+		<None Include="wwwroot\Admin\js\modules\common\navbar-search.js" />
+		<None Include="wwwroot\Admin\js\modules\common\sidebar.js" />
+		<None Include="wwwroot\Admin\js\modules\common\slimscroll.js" />
+		<None Include="wwwroot\Admin\js\modules\common\table-checkall.js" />
+		<None Include="wwwroot\Admin\js\modules\common\toggle-state.js" />
+		<None Include="wwwroot\Admin\js\modules\common\trigger-resize.js" />
+		<None Include="wwwroot\Admin\js\modules\elements\calendar.js" />
+		<None Include="wwwroot\Admin\js\modules\elements\cards.js" />
+		<None Include="wwwroot\Admin\js\modules\elements\gmap.js" />
+		<None Include="wwwroot\Admin\js\modules\elements\notify.js" />
+		<None Include="wwwroot\Admin\js\modules\elements\porlets.js" />
+		<None Include="wwwroot\Admin\js\modules\forms\forms.js" />
+		<None Include="wwwroot\Admin\js\modules\forms\wizard.js" />
+		<None Include="wwwroot\Admin\js\modules\pages\login-multi.js" />
+		<None Include="wwwroot\Admin\js\modules\pages\pages.js" />
+		<None Include="wwwroot\Admin\js\modules\tables\datatable.js" />
+		<None Include="wwwroot\Admin\js\scripts.js" />
+		<None Include="wwwroot\Admin\js\site.js" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\css\bootstrap-utilities.css.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\css\bootstrap.css.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\css\bootstrap.rtl.css.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\js\bootstrap.esm.js" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\js\bootstrap.esm.js.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\js\bootstrap.esm.min.js" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\js\bootstrap.esm.min.js.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\js\bootstrap.js" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\js\bootstrap.js.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\js\bootstrap.min.js" />
+		<None Include="wwwroot\Admin\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+		<None Include="wwwroot\Admin\lib\bootstrap\LICENSE" />
+		<None Include="wwwroot\Admin\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+		<None Include="wwwroot\Admin\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+		<None Include="wwwroot\Admin\lib\jquery-validation\dist\additional-methods.js" />
+		<None Include="wwwroot\Admin\lib\jquery-validation\dist\additional-methods.min.js" />
+		<None Include="wwwroot\Admin\lib\jquery-validation\dist\jquery.validate.js" />
+		<None Include="wwwroot\Admin\lib\jquery-validation\dist\jquery.validate.min.js" />
+		<None Include="wwwroot\Admin\lib\jquery-validation\LICENSE.md" />
+		<None Include="wwwroot\Admin\lib\jquery\dist\jquery.js" />
+		<None Include="wwwroot\Admin\lib\jquery\dist\jquery.min.js" />
+		<None Include="wwwroot\Admin\lib\jquery\dist\jquery.min.map" />
+		<None Include="wwwroot\Admin\vendor\%40fortawesome\fontawesome-free\webfonts\fa-brands-400.svg" />
+		<None Include="wwwroot\Admin\vendor\%40fortawesome\fontawesome-free\webfonts\fa-brands-400.woff2" />
+		<None Include="wwwroot\Admin\vendor\%40fortawesome\fontawesome-free\webfonts\fa-regular-400.svg" />
+		<None Include="wwwroot\Admin\vendor\%40fortawesome\fontawesome-free\webfonts\fa-regular-400.woff2" />
+		<None Include="wwwroot\Admin\vendor\%40fortawesome\fontawesome-free\webfonts\fa-solid-900.svg" />
+		<None Include="wwwroot\Admin\vendor\%40fortawesome\fontawesome-free\webfonts\fa-solid-900.woff2" />
+		<None Include="wwwroot\Admin\vendor\bootstrap-datepicker\dist\js\bootstrap-datepicker.js" />
+		<None Include="wwwroot\Admin\vendor\bootstrap-filestyle\src\bootstrap-filestyle.js" />
+		<None Include="wwwroot\Admin\vendor\bootstrap-slider\dist\bootstrap-slider.js" />
+		<None Include="wwwroot\Admin\vendor\bootstrap-tagsinput\dist\bootstrap-tagsinput.js" />
+		<None Include="wwwroot\Admin\vendor\bootstrap-wysiwyg\js\bootstrap-wysiwyg.min.js" />
+		<None Include="wwwroot\Admin\vendor\bootstrap\dist\js\bootstrap.js" />
+		<None Include="wwwroot\Admin\vendor\chosen-js\chosen.jquery.js" />
+		<None Include="wwwroot\Admin\vendor\components-jqueryui\jquery-ui.js" />
+		<None Include="wwwroot\Admin\vendor\datatables.net-bs4\js\dataTables.bootstrap4.js" />
+		<None Include="wwwroot\Admin\vendor\datatables.net-buttons-bs\js\buttons.bootstrap.js" />
+		<None Include="wwwroot\Admin\vendor\datatables.net-buttons\js\buttons.colVis.js" />
+		<None Include="wwwroot\Admin\vendor\datatables.net-buttons\js\buttons.flash.js" />
+		<None Include="wwwroot\Admin\vendor\datatables.net-buttons\js\buttons.html5.js" />
+		<None Include="wwwroot\Admin\vendor\datatables.net-buttons\js\buttons.print.js" />
+		<None Include="wwwroot\Admin\vendor\datatables.net-buttons\js\dataTables.buttons.js" />
+		<None Include="wwwroot\Admin\vendor\datatables.net-keytable\js\dataTables.keyTable.js" />
+		<None Include="wwwroot\Admin\vendor\datatables.net-responsive-bs\js\responsive.bootstrap.js" />
+		<None Include="wwwroot\Admin\vendor\datatables.net-responsive\js\dataTables.responsive.js" />
+		<None Include="wwwroot\Admin\vendor\datatables.net\js\jquery.dataTables.js" />
+		<None Include="wwwroot\Admin\vendor\easy-pie-chart\dist\jquery.easypiechart.js" />
+		<None Include="wwwroot\Admin\vendor\flot-spline\js\jquery.flot.spline.js" />
+		<None Include="wwwroot\Admin\vendor\flot\jquery.flot.categories.js" />
+		<None Include="wwwroot\Admin\vendor\flot\jquery.flot.js" />
+		<None Include="wwwroot\Admin\vendor\flot\jquery.flot.pie.js" />
+		<None Include="wwwroot\Admin\vendor\flot\jquery.flot.resize.js" />
+		<None Include="wwwroot\Admin\vendor\flot\jquery.flot.time.js" />
+		<None Include="wwwroot\Admin\vendor\fullcalendar\dist\fullcalendar.js" />
+		<None Include="wwwroot\Admin\vendor\fullcalendar\dist\gcal.js" />
+		<None Include="wwwroot\Admin\vendor\i18next-xhr-backend\i18nextXHRBackend.js" />
+		<None Include="wwwroot\Admin\vendor\i18next\i18next.js" />
+		<None Include="wwwroot\Admin\vendor\inputmask\dist\jquery.inputmask.bundle.js" />
+		<None Include="wwwroot\Admin\vendor\jquery-slimscroll\jquery.slimscroll.js" />
+		<None Include="wwwroot\Admin\vendor\jquery-sparkline\jquery.sparkline.js" />
+		<None Include="wwwroot\Admin\vendor\jquery-steps\build\jquery.steps.js" />
+		<None Include="wwwroot\Admin\vendor\jquery-ui-touch-punch\jquery.ui.touch-punch.js" />
+		<None Include="wwwroot\Admin\vendor\jquery-validation\dist\additional-methods.js" />
+		<None Include="wwwroot\Admin\vendor\jquery-validation\dist\jquery.validate.js" />
+		<None Include="wwwroot\Admin\vendor\jquery.flot.tooltip\js\jquery.flot.tooltip.js" />
+		<None Include="wwwroot\Admin\vendor\jquery.gmap\jquery.gmap.js" />
+		<None Include="wwwroot\Admin\vendor\jquery\dist\jquery.js" />
+		<None Include="wwwroot\Admin\vendor\js-storage\js.storage.js" />
+		<None Include="wwwroot\Admin\vendor\jszip\dist\jszip.js" />
+		<None Include="wwwroot\Admin\vendor\moment\min\moment-with-locales.js" />
+		<None Include="wwwroot\Admin\vendor\parsleyjs\dist\parsley.js" />
+		<None Include="wwwroot\Admin\vendor\pdfmake\build\pdfmake.js" />
+		<None Include="wwwroot\Admin\vendor\pdfmake\build\vfs_fonts.js" />
+		<None Include="wwwroot\Admin\vendor\popper.js\dist\umd\popper.js" />
+		<None Include="wwwroot\Admin\vendor\screenfull\dist\screenfull.js" />
+		<None Include="wwwroot\js\monitoring\auditlogs\auditlogsdevextreme.js" />
+		<None Include="wwwroot\js\monitoring\bugitem.js" />
+		<None Include="wwwroot\js\monitoring\showinglogs\showinglogs.js" />
+		<None Include="wwwroot\js\services\DevExHelperService.js" />
+		<None Include="wwwroot\js\site.js" />
+		<None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+		<None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+		<None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js" />
+		<None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js" />
+		<None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+		<None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+		<None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+		<None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+		<None Include="wwwroot\lib\bootstrap\LICENSE" />
+		<None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+		<None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+		<None Include="wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+		<None Include="wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+		<None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+		<None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+		<None Include="wwwroot\lib\jquery-validation\LICENSE.md" />
+		<None Include="wwwroot\lib\jquery\dist\jquery.js" />
+		<None Include="wwwroot\lib\jquery\dist\jquery.min.js" />
+		<None Include="wwwroot\lib\jquery\dist\jquery.min.map" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <OpenApiReference Include="OpenAPIs\swagger.json" ClassName="TourideOpenApi" CodeGenerator="NSwagCSharp" Namespace="Touride.UI" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\Framework\Touride.Framework.Abstractions\Touride.Framework.Abstractions.csproj" />
+	  <ProjectReference Include="..\..\..\Framework\Touride.Framework.Api.Application\Touride.Framework.Api.Application.csproj" />
+	  <ProjectReference Include="..\..\..\Framework\Touride.Framework.Api\Touride.Framework.Api.csproj" />
+	  <ProjectReference Include="..\..\..\Framework\Touride.Framework.DevExtreme\Touride.Framework.DevExtreme.csproj" />
+	  <ProjectReference Include="..\Touride.Api\Touride.Api.csproj" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <Folder Include="Areas\Admin\Data\" />
+	  <Folder Include="Areas\Admin\Models\" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,158 @@
+{
+    "sidebar": [
+        {
+            "text": "Dashboard",
+            "href": "dashboard.html",
+            "icon": "fas fa-tachometer-alt",
+            "alert": "12",
+            "badge": "badge badge-primary"
+        },
+        {
+            "text": "Charts",
+            "href": "#charts",
+            "icon": "fas fa-chart-bar",
+            "submenu": [
+                {
+                    "text": "Flot",
+                    "href": "chart-flot.html"
+                },
+                {
+                    "text": "Radial",
+                    "href": "chart-radial.html"
+                }
+            ]
+        },
+        {
+            "text": "Tables",
+            "href": "#tables",
+            "icon": "fas fa-table",
+            "submenu": [
+                {
+                    "text": "Data Tables",
+                    "href": "table-datatable.html"
+                },
+                {
+                    "text": "Standard",
+                    "href": "table-standard.html"
+                },
+                {
+                    "text": "Extended",
+                    "href": "table-extended.html"
+                }
+            ]
+        },
+        {
+            "text": "Forms",
+            "href": "#forms",
+            "icon": "fas fa-edit",
+            "submenu": [
+                {
+                    "text": "Standard",
+                    "href": "form-standard.html"
+                },
+                {
+                    "text": "Extended",
+                    "href": "form-extended.html"
+                },
+                {
+                    "text": "Validation",
+                    "href": "form-validation.html"
+                },
+                { "text": "Wizard", "href": "form-wizard.html" }
+            ]
+        },
+        {
+            "text": "Elements",
+            "href": "#elements",
+            "icon": "fas fa-wrench",
+            "submenu": [
+                {
+                    "text": "Cards",
+                    "href": "cards.html"
+                },
+                {
+                    "text": "Portlets",
+                    "href": "portlets.html"
+                },
+                {
+                    "text": "Buttons",
+                    "href": "buttons.html"
+                },
+                {
+                    "text": "Icons",
+                    "href": "icons.html"
+                },
+                {
+                    "text": "Notifications",
+                    "href": "notifications.html"
+                },
+                {
+                    "text": "Typography",
+                    "href": "typo.html"
+                },
+                {
+                    "text": "Grid",
+                    "href": "grid.html"
+                },
+                {
+                    "text": "Grid Masonry",
+                    "href": "grid-masonry.html"
+                },
+                {
+                    "text": "Dropdown",
+                    "href": "dropdown-animations.html"
+                },
+                {
+                    "text": "Widgets",
+                    "href": "widgets.html"
+                },
+                {
+                    "text": "Maps",
+                    "href": "maps.html"
+                },
+                {
+                    "text": "Calendar",
+                    "href": "calendar.html"
+                },
+                {
+                    "text": "Spinners",
+                    "href": "spinners.html"
+                }
+            ]
+        },
+        {
+            "text": "Pages",
+            "href": "#pages",
+            "icon": "far fa-file-alt",
+            "submenu": [
+                { "text": "Landing", "href": "landing.html" },
+                { "text": "Login", "href": "login.html" },
+                { "text": "Login Multi", "href": "login-multi.html" },
+                {
+                    "text": "Sign up",
+                    "href": "register.html"
+                },
+                {
+                    "text": "Lock",
+                    "href": "lock.html"
+                },
+                {
+                    "text": "Recover Password",
+                    "href": "recover.html"
+                },
+                {
+                    "text": "Empty Template",
+                    "href": "template.html"
+                },
+                {
+                    "text": "Timeline",
+                    "href": "timeline.html"
+                },
+                {
+                    "text": "Mail Inbox",
+                    "href": "inbox.html"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Framework\Touride.Framework.Abstractions\Touride.Framework.Abstractions.csproj" />
+		<ProjectReference Include="..\..\..\Framework\Touride.Framework.Data\Touride.Framework.Data.csproj" />
+		<ProjectReference Include="..\Touride.Abstraction\Touride.Abstraction.csproj" />
+	</ItemGroup>
+
+</Project>

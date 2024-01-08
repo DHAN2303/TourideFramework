@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>1.0.0</Version>
+		<Authors>Cahit Yusuf KAFADAR</Authors>
+		<Company>TG Labs</Company>
+		<Product>Touride</Product>
+		<PackageId>Touride.Framework.DevExtreme</PackageId>
+		<PackageTags>Touride Framework DevExtreme</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="DevExtreme.AspNet.Data" Version="2.9.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Touride.Framework.Utilities\Touride.Framework.Utilities.csproj" />
+	</ItemGroup>
+
+</Project>

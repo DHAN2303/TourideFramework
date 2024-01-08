@@ -1,0 +1,15 @@
+﻿
+@*@{
+    ViewData["Title"] = "View";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h1>View</h1>
+*@
+
+
+<script type="text/javascript">
+    TourideDatatable.Create('ttt', true, true, 'https://reqres.in/api/users?page=2',  [{ data: 'first_name' }, { data: 'email' }, { data: 'last_name' }, { data: 'avatar' }]);
+</script>
+
+

@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="alert alert-dismissible bg-light-primary border border-primary d-flex flex-column flex-sm-row p-5 mb-10">
+    <div class="d-flex flex-column pe-0 pe-sm-10">
+        <span>Staff Api'de yer alan Kullanıcı Listeleri (UserList) ayarları</span>
+    </div>
+</div>
+<div class="separator my-10"></div>
+
+<div class="card card-flush shadow-sm">
+    <div class="card-body py-5">
+        <div class="form-group row">
+            <div class="col-lg-12">
+                <div id="userListGrid"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+    {
+        <script src="~/js/UserModule/Common/userlistdevex.js"></script>
+}

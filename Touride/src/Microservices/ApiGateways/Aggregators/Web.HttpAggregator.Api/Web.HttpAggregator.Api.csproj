@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>312d921d-6135-4a9a-853d-3992dddb5e3f</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerfileContext>..\..\..\..\..</DockerfileContext>
+		<DockerComposeProjectPath>..\..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.18.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\..\Framework\Touride.Framework.Api.Application\Touride.Framework.Api.Application.csproj" />
+		<ProjectReference Include="..\..\..\..\Framework\Touride.Framework.Api\Touride.Framework.Api.csproj" />
+		<ProjectReference Include="..\..\..\..\Framework\Touride.Framework.Caching.InMemory\Touride.Framework.Caching.InMemory.csproj" />
+		<ProjectReference Include="..\..\..\..\Framework\Touride.Framework.Caching.Redis\Touride.Framework.Caching.Redis.csproj" />
+		<ProjectReference Include="..\Web.HttpAggregator.Abstraction\Web.HttpAggregator.Abstraction.csproj" />
+		<ProjectReference Include="..\Web.HttpAggregator.Application\Web.HttpAggregator.Application.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,125 @@
+﻿<aside class="aside-container">
+    <!-- START Sidebar (left)-->
+    <div class="aside-inner">
+        <nav class="sidebar" data-sidebar-anyclick-close>
+            <!-- START sidebar nav-->
+            <ul class="sidebar-nav">
+                <li class="sidebar-app-logo d-flex align-items-center justify-content-center py-3 d-md-none">
+                    <img class="img-fluid" src="/admin/img/app_logo_yellow.svg" />
+                    </li><!-- START user info-->
+                <li class="has-user-block">
+                    <div id="user-block">
+                        <div class="item user-block">
+                            <div class="user-block-content">
+                                <!-- User picture-->
+                                <div class="user-block-info">
+                                    <span class="user-block-name">Welcome, Alex</span><!-- START Dropdown to change status-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li><!-- END user info-->
+                @*<li class="nav collapse" id="user-links">*@
+                    <!-- START User links collapse-->
+                    <!--<ul class="sidebar-nav sidebar-subnav">
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="_Notifications.cshtml"><span>Notifications</span><span class="badge badge-danger float-right">120</span></a></li>
+                        <li><a href="#"><span>Messages</span><span class="badge badge-success float-right">300</span></a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>--><!-- END User links collapse-->
+                <!--</li>-->
+    <!-- Iterates over all sidebar items-->
+                <li class=" active">
+                    <a asp-controller="Home" asp-action="Index" title="Home">
+                       <em class="fas fa-tachometer-alt"></em><span>Home</span>
+                    </a>
+                </li>
+                <li class=" ">
+                    <a href="#Users" title="Users" data-toggle="collapse"><em class="fas fa-chart-bar"></em><span>Users</span></a>
+                    <ul class="sidebar-nav sidebar-subnav collapse" id="Users">
+                        <li class="sidebar-subnav-header">Users</li>
+
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "UserManagement" ? "active" : "")">
+                        <a asp-area="admin" asp-controller="User" asp-action="UserManagement" title="Users management"><span>Kullanıcı Yönetimi</span></a></li>
+
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "UserSubscribe" ? "active" : "")">
+                            <a asp-area="admin" asp-controller="User" asp-action="UserSubscribe" title="Subscription Management"><span>Kullanıcı Üyelik Yönetimi</span></a>
+                        </li>
+
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Coupons" ? "active" : "")">
+                        <a asp-area="admin" asp-controller="User" asp-action="Coupons" title="Coupon"><span>Kupon Yönetimi</span></a>
+                        </li>
+
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "ContentComplaint" ? "active" : "")">
+                        <a asp-area="admin" asp-controller="User" asp-action="ContentComplaint" title="Content complaints management"><span>İçerik Şikayetleri<br>Yönetimi</span></a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li class=" ">
+                     <a asp-area="admin" asp-controller="News" asp-action="Index" title="Index"><em class="fas fa-table"></em><span>News</span></a>
+                </li>
+                <li class=" ">
+                    <a href="#forms" title="Forms" data-toggle="collapse"><em class="fas fa-edit"></em><span>Forms</span></a>
+                    <ul class="sidebar-nav sidebar-subnav collapse" id="forms">
+                        <li class="sidebar-subnav-header">Forms</li>
+                        <li class=" "><a href="form-standard.html" title="Standard"><span>Standard</span></a></li>
+                        <li class=" "><a href="form-extended.html" title="Extended"><span>Extended</span></a></li>
+                        <li class=" "><a href="form-validation.html" title="Validation"><span>Validation</span></a></li>
+                        <li class=" "><a href="form-wizard.html" title="Wizard"><span>Wizard</span></a></li>
+                    </ul>
+                </li>
+
+                <li class=" ">
+                    <a href="#charts" title="Charts" data-toggle="collapse"><em class="fas fa-chart-bar"></em><span>Charts</span></a>
+                    <ul class="sidebar-nav sidebar-subnav collapse" id="charts">
+                        <li class="sidebar-subnav-header">Charts</li>
+                        <li class=" "><a href="chart-flot.html" title="Flot"><span>Flot</span></a></li>
+                        <li class=" "><a href="chart-radial.html" title="Radial"><span>Radial</span></a></li>
+                    </ul>
+                </li>
+                <li class=" ">
+                    <a href="#elements" title="Elements" data-toggle="collapse"><em class="fas fa-wrench"></em><span>Elements</span></a>
+                    <ul class="sidebar-nav sidebar-subnav collapse" id="elements">
+                        <li class="sidebar-subnav-header">Elements</li>
+                        <li class=" "><a href="cards.html" title="Cards"><span>Cards</span></a></li>
+                        <li class=" "><a href="portlets.html" title="Portlets"><span>Portlets</span></a></li>
+                        <li class=" "><a href="buttons.html" title="Buttons"><span>Buttons</span></a></li>
+                        <li class=" "><a href="icons.html" title="Icons"><span>Icons</span></a></li>
+                        <li class=" "><a href="notifications.html" title="Notifications"><span>Notifications</span></a></li>
+                        <li class=" "><a href="typo.html" title="Typography"><span>Typography</span></a></li>
+                        <li class=" "><a href="grid.html" title="Grid"><span>Grid</span></a></li>
+                        <li class=" "><a href="grid-masonry.html" title="Grid Masonry"><span>Grid Masonry</span></a></li>
+                        <li class=" "><a href="dropdown-animations.html" title="Dropdown"><span>Dropdown</span></a></li>
+                        <li class=" "><a href="widgets.html" title="Widgets"><span>Widgets</span></a></li>
+                        <li class=" "><a href="maps.html" title="Maps"><span>Maps</span></a></li>
+                        <li class=" "><a href="calendar.html" title="Calendar"><span>Calendar</span></a></li>
+                        <li class=" "><a href="spinners.html" title="Spinners"><span>Spinners</span></a></li>
+                    </ul>
+                </li>
+                <li class=" ">
+                    <a href="#pages" title="Pages" data-toggle="collapse"><em class="far fa-file-alt"></em><span>Pages</span></a>
+                    <ul class="sidebar-nav sidebar-subnav collapse" id="pages">
+                        <li class="sidebar-subnav-header">Pages</li>
+                      @*  <li class=" "><a href="landing.html" title="Landing"><span>Landing</span></a></li>*@
+                        <li class=" "><a asp-controller="Home" asp-action="Login" title="Login"><span>Login</span></a></li>
+                        <li class=" "><a href="login-multi.html" title="Login Multi"><span>Login Multi</span></a></li>
+                        <li class=" "><a href="register.html" title="Sign up"><span>Sign up</span></a></li>
+                        <li class=" "><a href="lock.html" title="Lock"><span>Lock</span></a></li>
+                        <li class=" "><a href="recover.html" title="Recover Password"><span>Recover Password</span></a></li>
+                        <li class=" "><a href="template.html" title="Empty Template"><span>Empty Template</span></a></li>
+                        <li class=" "><a href="timeline.html" title="Timeline"><span>Timeline</span></a></li>
+                        <li class=" "><a href="inbox.html" title="Mail Inbox"><span>Mail Inbox</span></a></li>
+                    </ul>
+                </li>
+            </ul><!-- Sidebar footer-->
+            <!--<div class="nav-footer">
+                <div class="nav-footer-divider"></div>--><!-- START button group-->
+                <!--<div class="btn-group text-center"><button class="btn btn-link" type="button" data-toggle="tooltip" data-title="Add Contact"><em class="fas fa-user text-muted"><sup class="fa fa-plus"></sup></em></button><button class="btn btn-link" type="button" data-toggle="tooltip" data-title="Settings"><em class="fas fa-cog text-muted"></em></button><button class="btn btn-link" type="button" data-toggle="tooltip" data-title="Logout"><em class="fas fa-sign-out-alt text-muted"></em></button></div>--><!-- END button group-->
+            <!--</div>-->
+    <!-- END sidebar nav-->
+        </nav>
+    </div><!-- END Sidebar (left)-->
+</aside>

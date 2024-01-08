@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>1.0.12</Version>
+		<Authors>Cahit Yusuf KAFADAR</Authors>
+		<Company>TG Labs</Company>
+		<Product>Touride</Product>
+		<PackageId>Touride.Framework.Api</PackageId>
+		<PackageTags>Touride Framework Api</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="6.0.2" />
+		<PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="6.0.5" />
+		<PackageReference Include="AspNetCore.HealthChecks.UI.SqlServer.Storage" Version="6.0.5" />
+		<PackageReference Include="AspNetCore.HealthChecks.UI.InMemory.Storage" Version="6.0.5" />
+		<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+		<PackageReference Include="AutoMapper" Version="12.0.1" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+		<PackageReference Include="Dapr.AspNetCore" Version="1.10.0" />
+		<PackageReference Include="Dapr.Client" Version="1.10.0" />
+		<PackageReference Include="Dapr.Actors" Version="1.10.0" />
+		<PackageReference Include="Dapr.Actors.AspNetCore" Version="1.10.0" />
+		<PackageReference Include="Elastic.Apm" Version="1.22.0" />
+		<PackageReference Include="Elastic.Apm.NetCoreAll" Version="1.22.0" />
+		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+		<PackageReference Include="Grpc.AspNetCore.Server" Version="2.53.0" />
+		<PackageReference Include="Hangfire.Dashboard.Basic.Authentication" Version="7.0.1" />
+		<PackageReference Include="Hangfire.InMemory" Version="0.4.0" />
+		<PackageReference Include="Hangfire.PostgreSql" Version="1.19.12" />
+		<PackageReference Include="Hangfire.SqlServer" Version="1.8.0" />
+		<PackageReference Include="Hellang.Middleware.ProblemDetails" Version="6.5.1" />
+		<PackageReference Include="IdentityModel" Version="6.1.0" />
+		<PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.21.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.SignalR.StackExchangeRedis" Version="7.0.5" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Http.Polly" Version="7.0.5" />
+		<PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.2.22" />
+		<PackageReference Include="MiniProfiler.EntityFrameworkCore" Version="4.2.22" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+		<PackageReference Include="Grpc.AspNetCore" Version="2.53.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Touride.Framework.Abstractions\Touride.Framework.Abstractions.csproj" />
+		<ProjectReference Include="..\Touride.Framework.Auth\Touride.Framework.Auth.csproj" />
+		<ProjectReference Include="..\Touride.Framework.Caching.Common\Touride.Framework.Caching.Common.csproj" />
+		<ProjectReference Include="..\Touride.Framework.Client\Touride.Framework.Client.csproj" />
+		<ProjectReference Include="..\Touride.Framework.Dapr\Touride.Framework.Dapr.csproj" />
+		<ProjectReference Include="..\Touride.Framework.DataAudit.Common\Touride.Framework.DataAudit.Common.csproj" />
+		<ProjectReference Include="..\Touride.Framework.DataAudit.Elasticsearch\Touride.Framework.DataAudit.Elasticsearch.csproj" />
+		<ProjectReference Include="..\Touride.Framework.DataAudit.Postgresql\Touride.Framework.DataAudit.Postgresql.csproj" />
+		<ProjectReference Include="..\Touride.Framework.DataAudit.RabbitMq\Touride.Framework.DataAudit.RabbitMq.csproj" />
+		<ProjectReference Include="..\Touride.Framework.Data\Touride.Framework.Data.csproj" />
+		<ProjectReference Include="..\Touride.Framework.Localization\Touride.Framework.Localization.csproj" />
+		<ProjectReference Include="..\Touride.Framework.Logging.Serilog\Touride.Framework.Logging.Serilog.csproj" />
+		<ProjectReference Include="..\Touride.Framework.Logging\Touride.Framework.Logging.csproj" />
+		<ProjectReference Include="..\Touride.Framework.Monitoring\Touride.Framework.Monitoring.csproj" />
+		<ProjectReference Include="..\Touride.Framework.Secret\Touride.Framework.Secret.csproj" />
+		<ProjectReference Include="..\Touride.Framework.TaskScheduling.Hangfire.Autofac\Touride.Framework.TaskScheduling.Hangfire.Autofac.csproj" />
+		<ProjectReference Include="..\Touride.Framework.TaskScheduling.Hangfire\Touride.Framework.TaskScheduling.Hangfire.csproj" />
+		<ProjectReference Include="..\Touride.Framework.Validation\Touride.Framework.Validation.csproj" />
+	</ItemGroup>
+
+</Project>

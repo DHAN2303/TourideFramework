@@ -1,0 +1,229 @@
+﻿<header class="topnavbar-wrapper">
+    <!-- START Top Navbar-->
+    <nav class="navbar topnavbar">
+        <!-- START navbar header-->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#/">
+                <div class="brand-logo">
+                    <img class="img-fluid-logo" src="~/admin/img/app_logo_yellow.svg" alt="App Logo" />
+                </div>
+                <div class="brand-logo-collapsed">
+                    <img class="img-fluid-logo" src="~/admin/img/app_logo_yellow.svg" alt="App Logo" />
+                </div>
+            </a>
+        </div><!-- END navbar header-->
+        <!-- START Left navbar-->
+        <ul class="navbar-nav mr-auto flex-row">
+            <li class="nav-item">
+                <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
+                <a class="nav-link d-none d-md-block d-lg-block d-xl-block" href="#" data-trigger-resize="" data-toggle-state="aside-collapsed">
+                    <em class="fas fa-align-left"></em></a>
+                    <!-- Button to show/hide the sidebar on mobile. Visible on mobile only.-->
+                    <a class="nav-link sidebar-toggle d-md-none" href="#" data-toggle-state="aside-toggled" data-no-persist="true">
+                        <em class="fas fa-align-left"></em>
+                    </a>
+            </li><!-- Search icon-->
+            @*<li class="nav-item"><a class="nav-link" href="#" data-search-open=""><em class="fas fa-search"></em></a></li>*@
+        </ul><!-- END Left navbar-->
+        <!-- START Right Navbar-->
+        <ul class="navbar-nav flex-row">
+            <!-- START Messages menu-->
+            <!--<li class="nav-item dropdown dropdown-list">
+                <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-toggle="dropdown">
+                    <em class="fas fa-envelope"></em><span class="badge badge-danger">300</span>
+                    </a>-->
+                    <!-- START Dropdown menu-->
+                <!--<div class="dropdown-menu dropdown-menu-right animated bounceIn">
+                    <div class="dropdown-header">You have 5 new messages</div>
+                    <div data-scrollable data-height="210">
+                        <div class="dropdown-item">-->
+                            <!-- START list group-->
+                            <!--<div class="list-group">-->
+                                <!-- list item-->
+                                <!--<div class="list-group-item list-group-item-action">
+                                    <div class="media">
+                                        <div class="align-self-start mr-2">
+                                            <img class="media-object rounded" style="width: 48px; height: 48px;" src="~/admin/img/user/01.jpg" alt="Image" />
+                                            </div>
+                                        <div class="media-body clearfix">
+                                            <small class="float-right">2h</small><strong class="media-heading text-primary"><span class="p-1 rounded d-inline-block bg-success mr-2"></span><span>Sheila Carter</span></strong>
+                                            <p class="mb-sm"><small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">-->
+                            <!-- START list group-->
+                            <!--<div class="list-group">-->
+                                <!-- list item-->
+                                <!--<div class="list-group-item list-group-item-action">
+                                    <div class="media">
+                                        <div class="align-self-start mr-2">
+                                            <img class="media-object rounded" style="width: 48px; height: 48px;" src="~/admin/img/user/04.jpg" alt="Image" />
+                                        </div>
+                                        <div class="media-body clearfix">
+                                            <small class="float-right">3h</small><strong class="media-heading text-primary"><span class="p-1 rounded d-inline-block bg-success mr-2"></span><span>Rich Reynolds</span></strong>
+                                            <p class="mb-sm"><small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">-->
+                            <!-- START list group-->
+                            <!--<div class="list-group">-->
+                                <!-- list item-->
+                                <!--<div class="list-group-item list-group-item-action">
+                                    <div class="media">
+                                        <div class="align-self-start mr-2"><img class="media-object rounded" style="width: 48px; height: 48px;" src="img/user/03.jpg" alt="Image"></div>
+                                        <div class="media-body clearfix">
+                                            <small class="float-right">4h</small><strong class="media-heading text-primary"><span class="p-1 rounded d-inline-block bg-danger mr-2"></span><span>Beverley Pierce</span></strong>
+                                            <p class="mb-sm"><small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">-->
+                            <!-- START list group-->
+                            <!--<div class="list-group">-->
+                                <!-- list item-->
+                                <!--<div class="list-group-item list-group-item-action">
+                                    <div class="media">
+                                        <div class="align-self-start mr-2">
+                                            <img class="media-object rounded" style="width: 48px; height: 48px;" src="~/admin/img/user/05.jpg" alt="Image" />
+                                        </div>
+                                        <div class="media-body clearfix">
+                                            <small class="float-right">4h</small><strong class="media-heading text-primary"><span class="p-1 rounded d-inline-block bg-danger mr-2"></span><span>Perry Cole</span></strong>
+                                            <p class="mb-sm"><small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">-->
+                            <!-- START list group-->
+                            <!--<div class="list-group">-->
+                                <!-- list item-->
+                                <!--<div class="list-group-item list-group-item-action">
+                                    <div class="media">
+                                        <div class="align-self-start mr-2">
+                                            <img class="media-object rounded" style="width: 48px; height: 48px;" src="~/admin/img/user/06.jpg" alt="Image" /></div>
+                                        <div class="media-body clearfix">
+                                            <small class="float-right">4h</small><strong class="media-heading text-primary"><span class="p-1 rounded d-inline-block bg-danger mr-2"></span><span>Carolyn Carpenter</span></strong>
+                                            <p class="mb-sm"><small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 text-center"><small class="text-primary">READ ALL</small></div>--><!-- END list group-->
+                <!--</div>--><!-- END Dropdown menu-->
+            <!--</li>-->
+    <!-- START Alert menu-->
+            <!--<li class="nav-item dropdown dropdown-list">
+                <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-toggle="dropdown"><em class="fas fa-bell"></em><span class="badge badge-info">120</span></a>--><!-- START Dropdown menu-->
+                <!--<div class="dropdown-menu dropdown-menu-right animated bounceIn">
+                    <div class="dropdown-item">-->
+                        <!-- START list group-->
+                        <!--<div class="list-group">-->
+                            <!-- list item-->
+                            <!--<div class="list-group-item list-group-item-action">
+                                <div class="media">
+                                    <div class="align-self-start mr-3"><em class="far fa-envelope fa-2x text-success"></em></div>
+                                    <div class="media-body">
+                                        <p class="mb-1">Unread messages</p>
+                                        <p class="m-0 text-muted text-sm">You have 10 unread messages</p>
+                                    </div>
+                                </div>
+                            </div>--><!-- list item-->
+                            <!--<div class="list-group-item list-group-item-action">
+                                <div class="media">
+                                    <div class="align-self-start mr-3"><em class="fas fa-cog fa-2x"></em></div>
+                                    <div class="media-body">
+                                        <p class="mb-1">New settings</p>
+                                        <p class="m-0 text-muted text-sm">There are new settings available</p>
+                                    </div>
+                                </div>
+                            </div>--><!-- list item-->
+                            <!--<div class="list-group-item list-group-item-action">
+                                <div class="media">
+                                    <div class="align-self-start mr-3"><em class="fas fa-fire fa-2x"></em></div>
+                                    <div class="media-body">
+                                        <p class="mb-1">Updates</p>
+                                        <p class="m-0 text-muted"><small>There are<strong class="mx-1 text-primary">2</strong>new updates available</small></p>
+                                    </div>
+                                </div>
+                            </div>--><!-- last list item-->
+                            <!--<div class="list-group-item list-group-item-action"><span class="d-flex align-items-center"><small>Unread notifications</small><span class="badge bg-gray ml-auto">14</span></span></div>
+                        </div>--><!-- END list group-->
+                    <!--</div>
+                </div>--><!-- END Dropdown menu-->
+            <!--</li>-->
+    <!-- END Alert menu-->
+            <!-- START Messages menu-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-toggle="dropdown"><em class="fas fa-user"></em></a><!-- START Dropdown menu-->
+                <div class="dropdown-menu dropdown-menu-right animated bounceIn">
+                    @*<div class="dropdown-item">
+                        <div class="p-1">
+                            <p>Overall progress</p>
+                            <div class="progress progress-xs m-0">
+                                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"><span class="sr-only">80% Complete</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-item">Profile</div>
+                    <div class="dropdown-item">Settings</div>
+                    <div class="dropdown-item">
+                        Notifications<div class="badge badge-info float-right">5</div>
+                    </div>*@
+                    <div class="dropdown-item">
+                        Messages<div class="badge badge-danger float-right">10</div>
+                    </div>
+                    <div class="dropdown-item">Logout</div>
+                </div><!-- END Dropdown menu-->
+            </li><!-- START Offsidebar button-->
+            <!--<li class="nav-item"><a class="nav-link" href="#" data-toggle-state="offsidebar-open" data-no-persist="true"><em class="fas fa-align-right"></em></a></li>--><!-- END Offsidebar menu-->
+        </ul><!-- END Right Navbar-->
+        <!-- START Search form-->
+        <!--<form class="navbar-form" role="search" action="search.html">
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Type and hit enter ...">
+                <div class="fas fa-times navbar-form-close" data-search-dismiss=""></div>
+            </div><button class="d-none" type="submit">Submit</button>
+        </form>--><!-- END Search form-->
+    </nav><!-- END Top Navbar-->
+</header><!-- sidebar-->s
+
+
+@*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container-fluid">
+        <a class="navbar-brand" asp-area="" asp-controller="TourideHome" asp-action="Index">TourideAdminPanel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="TourideHome" asp-action="Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="TourideHome" asp-action="Privacy">Privacy</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="List">Users</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>*@

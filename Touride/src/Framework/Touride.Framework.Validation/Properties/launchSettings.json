@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Touride.Framework.Validation": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:58688;http://localhost:58689"
+    }
+  }
+}

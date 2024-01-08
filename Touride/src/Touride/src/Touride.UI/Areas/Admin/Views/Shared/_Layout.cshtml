@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="TOURIDE Admin App">
+    <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
+    <title>Touride Admin Panel</title>
+
+    <!-- =============== VENDOR STYLES ===============-->
+    <!-- FONT AWESOME-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link href="~/admin/vendor/@@fortawesome/fontawesome-free/css/brands.css" rel="stylesheet" />
+    <link href="~/admin/vendor/@@fortawesome/fontawesome-free/css/fontawesome.css" rel="stylesheet" />
+    <link href="~/admin/vendor/@@fortawesome/fontawesome-free/css/regular.css" rel="stylesheet" />
+    <link href="~/admin/vendor/@@fortawesome/fontawesome-free/css/solid.css" rel="stylesheet" />
+    <!-- ANIMATE.CSS-->
+    <link href="~/admin/vendor/animate.css/animate.css" rel="stylesheet" />
+    <!-- =============== PAGE VENDOR STYLES ===============-->
+    <!-- =============== BOOTSTRAP STYLES ===============-->
+    <link href="~/admin/css/bootstrap.css" rel="stylesheet" />
+    <!-- =============== APP STYLES ===============-->
+    <link href="~/admin/css/app.css" rel="stylesheet" />
+      @RenderSection("DataTableLink", required: false)
+</head>
+
+<body>
+    <div class="wrapper">
+        <!---LOCK,LOGIN-MULTI, LOGIN -->
+        <!-- top navbar-->
+        @await Html.PartialAsync("_Navbar")
+        @await Html.PartialAsync("_Side-Bar")
+        @RenderSection("OffSidebar", false)
+        <!-- Main section-->
+        <section class="section-container">
+            <div class="content-wrapper">
+                <div class="content-header">
+                    <div class="content-title">@ViewBag.Title</div>
+                </div>
+                @RenderBody()
+                @RenderSection("DashboardSidebar", false)
+
+            </div>
+        </section>
+    </div><!-- =============== VENDOR SCRIPTS ===============-->
+                @RenderSection("DataTableCustomScript", required: false)
+    <!-- STORAGE API-->
+    <script src="~/admin/vendor/js-storage/js.storage.js"></script>
+    <script src="~/admin/vendor/screenfull/dist/screenfull.js"></script>
+    <script src="~/admin/vendor/i18next/i18next.js"></script>
+    <script src="~/admin/vendor/i18next-xhr-backend/i18nextxhrbackend.js"></script>
+    <script src="~/admin/vendor/jquery/dist/jquery.js"></script>
+    <script src="~/admin/vendor/popper.js/dist/umd/popper.js"></script>
+    <script src="~/admin/vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- =============== PAGE VENDOR SCRIPTS ===============-->
+    @*  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Flot'tan önce jQuery'yi ekleyin -->*@
+    <script src="~/admin/vendor/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <script src="~/admin/vendor/jquery-sparkline/jquery.sparkline.js"></script>
+    <script src="~/admin/vendor/flot/jquery.flot.js"></script> <!-- Flot ana kütüphaneyi önce ekleyin -->
+    <script src="~/admin/vendor/flot/jquery.flot.categories.js"></script>
+    <script src="~/admin/vendor/flot/jquery.flot.pie.js"></script>
+    <script src="~/admin/vendor/flot/jquery.flot.resize.js"></script>
+    <script src="~/admin/vendor/flot/jquery.flot.time.js"></script>
+    <script src="~/admin/vendor/jquery.flot.tooltip/js/jquery.flot.tooltip.js"></script>
+    <script src="~/admin/vendor/flot-spline/js/jquery.flot.spline.js"></script>
+    <script src="~/admin/vendor/easy-pie-chart/dist/jquery.easypiechart.js"></script>
+    <script src="~/admin/vendor/moment/min/moment-with-locales.js"></script>
+    <!-- =============== APP SCRIPTS ===============-->
+    <script src="~/admin/js/app.init.js"></script>
+    <script src="~/admin/js/app.js"></script>
+
+    <!-- =============== Automatically open active sub-menus ===============-->
+
+    <script>$(document).ready(function () {
+            $(".active").closest(".collapse").addClass("show");
+        });</script>
+
+</body >
+
+</html >
+

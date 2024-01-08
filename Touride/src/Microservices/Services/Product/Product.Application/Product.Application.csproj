@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Touride.Framework.Dapr\Touride.Framework.Dapr.csproj" />
+    <ProjectReference Include="..\..\..\..\Framework\Touride.Framework.MediatR\Touride.Framework.MediatR.csproj" />
+    <ProjectReference Include="..\Product.Abstraction\Product.Abstraction.csproj" />
+    <ProjectReference Include="..\Product.Domain\Product.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

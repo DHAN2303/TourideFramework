@@ -1,0 +1,120 @@
+﻿@{
+    ViewData["Title"] = "Kullanıcı Yönetimi";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<link href="https://cdn.datatables.net/v/dt/jszip-3.10.1/dt-1.13.6/af-2.6.0/b-2.4.2/b-colvis-2.4.2/b-html5-2.4.2/b-print-2.4.2/cr-1.7.0/date-1.5.1/fc-4.3.0/fh-3.4.0/kt-2.10.0/r-2.5.0/rg-1.4.1/rr-1.4.1/sc-2.2.0/sb-1.6.0/sp-2.2.0/sl-1.7.0/sr-1.3.0/datatables.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/v/dt/jszip-3.10.1/dt-1.13.6/af-2.6.0/b-2.4.2/b-colvis-2.4.2/b-html5-2.4.2/b-print-2.4.2/cr-1.7.0/date-1.5.1/fc-4.3.0/fh-3.4.0/kt-2.10.0/r-2.5.0/rg-1.4.1/rr-1.4.1/sc-2.2.0/sb-1.6.0/sp-2.2.0/sl-1.7.0/sr-1.3.0/datatables.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://markcell.github.io/jquery-tabledit/assets/js/tabledit.min.js"></script>
+
+<script src="~/admin/js/custom/user/tourideDatatable.js"></script>
+
+<div class="rounded-10 p-3">
+
+    <div class="d-flex flex-row-reverse mb-3">
+            <button class="btn btn-primary mx-1" type="button" data-toggle="collapse" data-target="#userManagementFilterBar" aria-expanded="false" aria-controls="collapseExample">
+                Filtrele ve kullanıcıları getir
+            </button>
+    </div>
+    
+    @* start filter bar *@
+    <div class="collapse rounded-10" id="userManagementFilterBar">
+        <div class="card card-body">
+                <div class=" row">
+                    <div class="row">
+                        
+                        @* start gender *@
+                        <div class="col-3">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Cinsiyet</span>
+                                </div>
+                                <select class="custom-select">
+                                    <option class="form-control" value="1" selected>Tümü</option>
+                                    <option class="form-control" value="1">Kadın</option>
+                                    <option class="form-control" value="2">Erkek</option>
+                                    <option class="form-control" value="3">Belirtilmemiş</option>
+                                </select>
+                            </div>
+                        </div>
+                        @* end gender *@
+
+                        @* start age *@
+                        <div class="col-3">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Yaş aralığı</span>
+                                </div>
+                                <select class="custom-select">
+                                    <option class="form-control" value="1" selected>Tümü</option>
+                                    <option class="form-control" value="1">25-35</option>
+                                    <option class="form-control" value="2">35-45</option>
+                                    <option class="form-control" value="3">45-65</option>
+                                    <option class="form-control" value="3">65-∞</option>
+                                </select>
+                            </div>
+                        </div>
+                        @* end age *@
+
+                        @* start user identity kind *@
+                        <div class="col-4">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <select id="userIdentitySelection" class="custom-select" required>
+                                        <option class="form-control" value="1" selected>Tümü</option>
+                                        <option class="form-control" value="2">Email</option>
+                                        <option class="form-control" value="3">İsim</option>
+                                        <option class="form-control" value="4">Id</option>
+                                        <option class="form-control" value="5">Telefon Numarası</option>
+                                    </select>
+                                </div>
+                                <input disabled id="userIdentityInput" class="form-control" type="search" placeholder="users identity.....">
+                            </div>
+                        </div>
+                        @* end user identity kind *@
+
+                        <div class="col-2">
+                            <button class="btn btn-primary  " type="button">Getir</button>
+                        </div>
+                        
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    @* end filter bar  *@
+
+
+    <div class="rounded-10 p-3 shadow bg-white">
+        <table id="ttt" class="table table-striped table-bordered display nowrap" style="width:100%">
+            <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Subscription Kind</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Password</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Subscription Kind</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Password</th>
+                <th>Actions</th>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+<script src="~/admin/js/custom/user/userManagement.js"></script>
+<script src="~/admin/js/custom/user/common.js"></script>

@@ -1,0 +1,100 @@
+version: '3.4'
+
+volumes:
+  es-data:
+
+services:
+
+  maildev:
+    image: maildev/maildev:latest
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+
+  redis:
+    image: redis:alpine
+
+  zipkin:
+    image: openzipkin/zipkin-slim:latest
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.0
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.15.0
+
+  apm-server:
+    image: docker.elastic.co/apm/apm-server:7.15.0
+
+  mongo:
+    image: mongo:5.0.13
+
+  sqldata:
+    image: mcr.microsoft.com/azure-sql-edge
+
+  #graylog:
+  #  image: graylog/graylog:5.0
+
+  basket-api:
+    image: swr.tr-west-1.myhuaweicloud.com/defacto-demo/basketapi:v1
+    build:
+      context: .
+      dockerfile: src/Microservices/Services/Basket/Basket.API/Dockerfile
+
+  basket-api-dapr:
+    image: "daprio/daprd:1.9.4"
+    network_mode: "service:basket-api"
+    depends_on:
+      - basket-api
+
+  web-httpaggregator-api:
+    image: swr.tr-west-1.myhuaweicloud.com/defacto-demo/webhttpaggregatorapi:v1
+    build:
+      context: .
+      dockerfile: src/Microservices/ApiGateways/Aggregators/Web.HttpAggregator.Api/Dockerfile
+
+  web-httpaggregator-api-dapr:
+    image: "daprio/daprd:1.9.4"
+    network_mode: "service:web-httpaggregator-api"
+    depends_on:
+      - web-httpaggregator-api
+
+  dapr-placement:
+    image: "daprio/dapr:1.9.4"
+
+  order-api:
+    image: swr.tr-west-1.myhuaweicloud.com/defacto-demo/webhttporderapi:v1
+    build:
+      context: .
+      dockerfile: src/Microservices/Services/Order/Order.API/Dockerfile
+
+  order-api-dapr:
+    image: "daprio/daprd:1.9.4"
+    network_mode: "service:order-api"
+    depends_on:
+      - order-api
+
+  payment-api:
+    image: swr.tr-west-1.myhuaweicloud.com/defacto-demo/paymentapi:v1
+    build:
+      context: .
+      dockerfile: src/Microservices/Services/Payment/Payment.API/Dockerfile
+
+  payment-api-dapr:
+    image: "daprio/daprd:1.9.4"
+    network_mode: "service:payment-api"
+    depends_on:
+      - payment-api
+
+  product-api:
+    image: swr.tr-west-1.myhuaweicloud.com/defacto-demo/productapi:v1
+    build:
+      context: .
+      dockerfile: src/Microservices/Services/Product/Product.API/Dockerfile
+
+  product-api-dapr:
+    image: "daprio/daprd:1.9.4"
+    network_mode: "service:product-api"
+    depends_on:
+      - product-api
+

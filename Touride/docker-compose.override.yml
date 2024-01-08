@@ -1,0 +1,194 @@
+version: '3.4'
+
+services:
+
+  rabbitmq:
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "5379:6379"
+
+  zipkin:
+    ports:
+      - "5411:9411"
+
+  elasticsearch:
+    container_name: elasticsearch
+    environment:
+      - "discovery.type=single-node"
+      - "bootstrap.memory_lock=true"
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - "ELASTIC_PASSWORD=elastic"
+      - "xpack.security.enabled=true"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - es-data:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+
+  kibana:
+    container_name: kibana
+    environment:
+      - "ELASTICSEARCH_URL=http://elasticsearch:9200"
+      - "ELASTICSEARCH_USERNAME=elastic"
+      - "ELASTICSEARCH_PASSWORD=elastic"
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+
+  apm-server:
+    container_name: apm-server
+    environment:
+      - "ELASTICSEARCH_HOST=http://elasticsearch:9200"
+      - "ELASTICSEARCH_USERNAME=elastic"
+      - "ELASTICSEARCH_PASSWORD=elastic"
+      - "KIBANA_HOST=http://kibana:5601"
+    command: apm-server -e -E output.elasticsearch.hosts=elasticsearch:9200 -E output.elasticsearch.username=elastic -E output.elasticsearch.password=elastic -E setup.kibana.host=kibana:5601
+    ports:
+      - "8200:8200"
+    depends_on:
+      - elasticsearch
+      - kibana
+    #logging: *default-logging
+    #logging: *default-logging      
+  #apm-server:
+  #  container_name: apm-server
+  #  environment:
+  #    - "ELASTICSEARCH_HOST=http://elasticsearch:9200"
+  #    - "ELASTICSEARCH_USERNAME=elastic"
+  #    - "ELASTICSEARCH_PASSWORD=elastic"
+  #    - "KIBANA_HOST=http://kibana:5601"
+  #  command: apm-server -e -E output.elasticsearch.hosts=elasticsearch:9200 -E output.elasticsearch.username=elastic -E output.elasticsearch.password=elastic -E setup.kibana.host=kibana:5601
+  #  ports:
+  #    - "8200:8200"
+  #  depends_on:
+  #    - elasticsearch
+  #    - kibana
+
+  sqldata:
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "5433:1433"
+    volumes:
+      - defactoecp-sqldata:/var/opt/mssql
+
+  basket-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+    ports:
+      - "5001:80"
+      - "50001:50001"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
+
+  basket-api-dapr:
+
+    command: ["./daprd",
+      "-app-id", "basket-api",
+      "-app-port", "80",
+      "-components-path", "/components",
+      "-config", "/configuration/defacto-ecp-config.yaml"
+      ]
+    volumes:
+      - "./dapr/components/:/components"
+      - "./dapr/configuration/:/configuration"
+
+  web-httpaggregator-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+    ports:
+      - "5000:80"
+      - "50002:50002"
+
+  web-httpaggregator-api-dapr:
+    command: ["./daprd",
+      "-app-id", "web-httpaggregator-api",
+      "-app-port", "80",
+      "-components-path", "/components",
+      "-config", "/configuration/defacto-ecp-config.yaml"
+      ]
+    volumes:
+      - "./dapr/components/:/components"
+      - "./dapr/configuration/:/configuration"
+
+  dapr-placement:
+    command: ["./placement", "-port", "50000", "-log-level", "debug"]
+    ports:
+      - "50000:50000"
+
+  order-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+    ports:
+      - "5003:80"
+      - "50003:50003"
+
+  order-api-dapr:
+    command: ["./daprd",
+      "-app-id", "order-api",
+      "-app-port", "80",
+      "-log-level", "debug",
+      "-placement-host-address", "dapr-placement:50000",
+      "-components-path", "/components",
+      "-config", "/configuration/defacto-ecp-config.yaml"
+      ]
+    volumes:
+      - "./dapr/components/:/components"
+      - "./dapr/configuration/:/configuration"
+
+  payment-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+    ports:
+      - "5004:80"
+      - "50004:50004"
+
+  payment-api-dapr:
+    command: ["./daprd",
+      "-app-id", "payment-api",
+      "-app-port", "80",
+      "-components-path", "/components",
+      "-config", "/configuration/defacto-ecp-config.yaml"
+      ]
+    volumes:
+      - "./dapr/components/:/components"
+      - "./dapr/configuration/:/configuration"
+
+  product-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+    ports:
+      - "5005:80"
+      - "50005:50005"
+
+  product-api-dapr:
+    command: ["./daprd",
+      "-app-id", "product-api",
+      "-app-port", "80",
+      "-components-path", "/components",
+      "-config", "/configuration/defacto-ecp-config.yaml"
+      ]
+    volumes:
+      - "./dapr/components/:/components"
+      - "./dapr/configuration/:/configuration"
+
+volumes:
+  defactoecp-sqldata:
+    external: false

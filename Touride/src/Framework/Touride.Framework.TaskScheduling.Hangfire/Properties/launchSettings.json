@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Touride.Framework.TaskScheduling.Hangfire": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:58673;http://localhost:58677"
+    }
+  }
+}

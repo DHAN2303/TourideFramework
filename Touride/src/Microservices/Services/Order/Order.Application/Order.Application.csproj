@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="12.0.1" />
+		<PackageReference Include="MediatR" Version="12.0.1" />
+		<PackageReference Include="Dapr.Actors" Version="1.10.0" />
+		<PackageReference Include="Dapr.Actors.AspNetCore" Version="1.10.0" />
+		<PackageReference Include="Dapr.AspNetCore" Version="1.10.0" />
+		<PackageReference Include="Dapr.Extensions.Configuration" Version="1.10.0" />
+		<PackageReference Include="DevExtreme.AspNet.Data" Version="2.9.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\..\Framework\Touride.Framework.Abstractions\Touride.Framework.Abstractions.csproj" />
+		<ProjectReference Include="..\..\..\..\Framework\Touride.Framework.Client\Touride.Framework.Client.csproj" />
+		<ProjectReference Include="..\..\..\..\Framework\Touride.Framework.Dapr\Touride.Framework.Dapr.csproj" />
+		<ProjectReference Include="..\..\..\..\Framework\Touride.Framework.DevExtreme\Touride.Framework.DevExtreme.csproj" />
+		<ProjectReference Include="..\..\..\..\Framework\Touride.Framework.MediatR\Touride.Framework.MediatR.csproj" />
+		<ProjectReference Include="..\Order.Abstraction\Order.Abstraction.csproj" />
+		<ProjectReference Include="..\Order.Domain\Order.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

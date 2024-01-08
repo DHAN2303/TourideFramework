@@ -1,0 +1,18 @@
+﻿{
+  "data": [
+    {
+      "complaining_user": "John",
+      "reported_user": "Snow",
+      "content": "İçerik",
+      "content_shared_date": "07/10/2023",
+      "content_complaints_number": "25"
+    },
+    {
+      "complaining_user": "John",
+      "reported_user": "Snow",
+      "content": "İçerik",
+      "content_shared_date": "07/10/2023",
+      "content_complaints_number": "25"
+    }
+  ]
+}

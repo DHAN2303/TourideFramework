@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="12.0.1" />
+		<PackageReference Include="FluentValidation" Version="11.5.2" />
+		<PackageReference Include="MediatR" Version="12.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Touride.Framework.Client\Touride.Framework.Client.csproj" />
+		<ProjectReference Include="..\..\..\Touride.Framework.DevExtreme\Touride.Framework.DevExtreme.csproj" />
+		<ProjectReference Include="..\..\..\Touride.Framework.Notification\Touride.Framework.Notification.csproj" />
+		<ProjectReference Include="..\..\..\Touride.Framework.Statics\Touride.Framework.Statics.csproj" />
+		<ProjectReference Include="..\ProjectName.Abstraction\ProjectName.Abstraction.csproj" />
+		<ProjectReference Include="..\ProjectName.Domain\ProjectName.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

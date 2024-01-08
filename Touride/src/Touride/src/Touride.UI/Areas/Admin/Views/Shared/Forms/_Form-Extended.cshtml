@@ -1,0 +1,104 @@
+﻿         <!-- Page content-->
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="content-title">Form Extended<small>New elements to extend the classic functions</small></div>
+    </div><!-- START card-->
+    <div class="card card-default">
+        <div class="card-header"> Form elements</div>
+        <div class="card-body">
+            <form class="form-horizontal" method="get" action="#">
+                <fieldset>
+                    <legend class="border-bottom mb-4">New Components</legend>
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Slider<br><small>Classic, range and vertical</small></label>
+                        <div class="col-md-4"><input class="slider slider-vertical" data-ui-slider="" type="text" value="" data-slider-min="5" data-slider-max="35" data-slider-step="1" data-slider-value="5" data-slider-orientation="vertical"><input class="slider slider-vertical" data-ui-slider="" type="text" value="" data-slider-min="5" data-slider-max="35" data-slider-step="1" data-slider-value="10" data-slider-orientation="vertical"><input class="slider slider-vertical" data-ui-slider="" type="text" value="" data-slider-min="5" data-slider-max="35" data-slider-step="1" data-slider-value="15" data-slider-orientation="vertical"><input class="slider slider-vertical" data-ui-slider="" type="text" value="" data-slider-min="5" data-slider-max="35" data-slider-step="1" data-slider-value="20" data-slider-orientation="vertical"><input class="slider slider-vertical" data-ui-slider="" type="text" value="" data-slider-min="5" data-slider-max="35" data-slider-step="1" data-slider-value="25" data-slider-orientation="vertical"><input class="slider slider-vertical" data-ui-slider="" type="text" value="" data-slider-min="5" data-slider-max="35" data-slider-step="1" data-slider-value="30" data-slider-orientation="vertical"><br><br><input class="slider slider-horizontal" data-ui-slider="" type="text" value="" data-slider-min="5" data-slider-max="20" data-slider-step="1" data-slider-value="10" data-slider-orientation="horizontal"><br><br><input class="slider" id="sl2" data-ui-slider="" type="text" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,750]"></div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-group row align-items-center">
+                        <label class="col-md-2 col-form-label">Switch Small</label>
+                        <div class="col-md-10"><label class="switch switch-sm"><input type="checkbox" checked="checked"><span></span></label></div>
+                    </div>
+                    <div class="form-group row align-items-center">
+                        <label class="col-md-2 col-form-label">Switch Default</label>
+                        <div class="col-md-10"><label class="switch"><input type="checkbox" checked="checked"><span></span></label></div>
+                    </div>
+                    <div class="form-group row align-items-center">
+                        <label class="col-md-2 col-form-label">Switch Large</label>
+                        <div class="col-md-10"><label class="switch switch-lg"><input type="checkbox" checked="checked"><span></span></label></div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Masked input</label>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-6 mb-3"><input class="form-control" type="text" data-masked="" data-inputmask="'mask': '999-99-999-9999-9'" placeholder="ISBN"><span class="form-text">data-inputmask="'mask': '999-99-999-9999-9"'</span></div>
+                                <div class="col-md-6 mb-3"><input class="form-control" type="text" data-masked="" data-inputmask="'mask': '99/99/9999'" placeholder="Date"><span class="form-text">data-inputmask="'mask': '99/99/9999"'</span></div>
+                                <div class="col-md-6 mb-3"><input class="form-control" type="text" data-masked="" data-inputmask="'mask': '(999) 999-9999'" placeholder="Phone number"><span class="form-text">data-inputmask="'mask': '(999) 999-9999"'</span></div>
+                                <div class="col-md-6 mb-3"><input class="form-control" type="text" data-masked="" data-inputmask="'mask': 'aaaa-9999-aa99-9999'" placeholder="Custom Key"><span class="form-text">data-inputmask="'mask': 'aaaa-9999-aa99-9999"'</span></div>
+                                <div class="col-md-6 mb-3"><input class="form-control" type="text" data-masked="" data-inputmask="'mask': '$ 999.999.999,99'" placeholder="Currency Dolar"><span class="form-text">data-inputmask="'mask': '$ 999.999.999,99"'</span></div>
+                                <div class="col-md-6 mb-3"><input class="form-control" type="text" data-masked="" data-inputmask="'mask': '€ 999.999.999,99'" placeholder="Currency Euro"><span class="form-text">data-inputmask="'mask': '€ 999.999.999,99"'</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-group row mb-2">
+                        <label class="col-md-2 col-form-label mb-2">DatePicker</label>
+                        <div class="col-xl-6 col-10">
+                            <div class="input-group date" id="datetimepicker1"><input class="form-control" type="text"><span class="input-group-append input-group-addon"><span class="input-group-text fas fa-calendar-alt"></span></span></div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Tags input</label>
+                        <div class="col-md-10"><input class="form-control" type="text" data-role="tagsinput" value="Amsterdam,Washington,Sydney,Beijing,Cairo"></div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">File input</label>
+                        <div class="col-md-10"><input class="form-control filestyle" type="file" data-btnClass="btn btn-primary ml-3"></div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">Simple wysiwyg</label>
+                        <div class="col-md-10">
+                            <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
+                                <div class="btn-group dropdown">
+                                    <a class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" title="Font"><em class="fa fa-font"></em></a>
+                                    <div class="dropdown-menu"><a class="dropdown-item" href="javacript:void" data-edit="fontName Arial" style="font-family:'Arial'">Arial</a><a class="dropdown-item" href="javacript:void" data-edit="fontName Sans" style="font-family:'Sans'">Sans</a><a class="dropdown-item" href="javacript:void" data-edit="fontName Serif" style="font-family:'Serif'">Serif</a></div>
+                                </div>
+                                <div class="btn-group dropdown">
+                                    <a class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" title="Font Size"><em class="fa fa-text-height"></em>&nbsp;</a>
+                                    <div class="dropdown-menu"><a class="dropdown-item" href="javacript:void" data-edit="fontSize 5" style="font-size:24px">Huge</a><a class="dropdown-item" href="javacript:void" data-edit="fontSize 3" style="font-size:18px">Normal</a><a class="dropdown-item" href="javacript:void" data-edit="fontSize 1" style="font-size:14px">Small</a></div>
+                                </div>
+                                <div class="btn-group"><a class="btn btn-secondary" data-edit="bold" data-toggle="tooltip" title="Bold (Ctrl/Cmd+B)"><em class="fa fa-bold"></em></a><a class="btn btn-secondary" data-edit="italic" data-toggle="tooltip" title="Italic (Ctrl/Cmd+I)"><em class="fa fa-italic"></em></a><a class="btn btn-secondary" data-edit="strikethrough" data-toggle="tooltip" title="Strikethrough"><em class="fa fa-strikethrough"></em></a><a class="btn btn-secondary" data-edit="underline" data-toggle="tooltip" title="Underline (Ctrl/Cmd+U)"><em class="fa fa-underline"></em></a></div>
+                                <div class="btn-group"><a class="btn btn-secondary" data-edit="insertunorderedlist" data-toggle="tooltip" title="Bullet list"><em class="fa fa-list-ul"></em></a><a class="btn btn-secondary" data-edit="insertorderedlist" data-toggle="tooltip" title="Number list"><em class="fa fa-list-ol"></em></a><a class="btn btn-secondary" data-edit="outdent" data-toggle="tooltip" title="Reduce indent (Shift+Tab)"><em class="fas fa-outdent"></em></a><a class="btn btn-secondary" data-edit="indent" data-toggle="tooltip" title="Indent (Tab)"><em class="fa fa-indent"></em></a></div>
+                                <div class="btn-group"><a class="btn btn-secondary" data-edit="justifyleft" data-toggle="tooltip" title="Align Left (Ctrl/Cmd+L)"><em class="fa fa-align-left"></em></a><a class="btn btn-secondary" data-edit="justifycenter" data-toggle="tooltip" title="Center (Ctrl/Cmd+E)"><em class="fa fa-align-center"></em></a><a class="btn btn-secondary" data-edit="justifyright" data-toggle="tooltip" title="Align Right (Ctrl/Cmd+R)"><em class="fa fa-align-right"></em></a><a class="btn btn-secondary" data-edit="justifyfull" data-toggle="tooltip" title="Justify (Ctrl/Cmd+J)"><em class="fa fa-align-justify"></em></a></div>
+                                <div class="btn-group dropdown">
+                                    <a class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><em class="fa fa-link"></em></a>
+                                    <div class="dropdown-menu">
+                                        <div class="input-group">
+                                            <input class="form-control form-control-sm" id="LinkInput" placeholder="URL" type="text" data-edit="createLink">
+                                            <div class="input-group-btn"><button class="btn btn-sm btn-secondary" type="button">Add</button></div>
+                                        </div>
+                                    </div><a class="btn btn-secondary" data-edit="unlink" data-toggle="tooltip" title="Remove Hyperlink"><em class="fa fa-cut"></em></a>
+                                </div>
+                                <div class="btn-group"><a class="btn btn-secondary" id="pictureBtn" data-toggle="tooltip" title="Insert picture (or just drag &amp; drop)"><em class="far fa-image"></em></a><input type="file" data-edit="insertImage" style="position:absolute; opacity:0; width:41px; height:34px"></div>
+                                <div class="btn-group ml-auto"><a class="btn btn-secondary" data-edit="undo" data-toggle="tooltip" title="Undo (Ctrl/Cmd+Z)"><em class="fa fa-undo"></em></a><a class="btn btn-secondary" data-edit="redo" data-toggle="tooltip" title="Redo (Ctrl/Cmd+Y)"><em class="fas fa-redo"></em></a></div>
+                            </div>
+                            <div class="form-control wysiwyg mt-3" style="overflow:scroll; height:250px;max-height:250px">Type something ...</div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-group text-right"><button class="btn btn-secondary mr-3" type="submit">Cancel</button><button class="btn btn-primary" type="submit">Save changes</button></div>
+                </fieldset>
+            </form>
+        </div>
+    </div><!-- END card-->
+</div>
